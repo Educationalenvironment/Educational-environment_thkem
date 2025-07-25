@@ -92,7 +92,7 @@
   padding: 4px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   display: block;
 }
 
@@ -643,6 +643,45 @@
 }
 
 /*عناصر الدرس*/
+/*هدف الدرس الأول-----------------------------------------------------------------------*/
+
+.lessonObjectives1 .objectives-new-container {
+  display: flex;
+  width: 90%;
+  height: 60vh; /* أو أي ارتفاع يناسبك */
+  direction: rtl;
+}
+
+.lessonObjectives1 .objectives-content-row {
+  display: flex;
+  width: 100%;
+}
+
+/* النصف الأيمن للنص */
+.lessonObjectives1 .objectives-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9ff;
+}
+
+/* النصف الأيسر للصورة */
+.lessonObjectives1 .objectives-img-side {
+  flex: 1;
+}
+
+.lessonObjectives1 .objectives-img-side img {
+  width: 500px;
+  height: 450px;
+  object-fit: cover; /* لضمان تغطية كاملة */
+}
+
+
 /*الهدف الأول*/
 
 .lesson1_T1-row {
@@ -650,6 +689,7 @@
   gap: 20px;
   direction: rtl;
   align-items: center;
+  flex-wrap: wrap; /* استجابة للشاشات الصغيرة */
 }
 
 .lesson1_T1-text {
@@ -657,19 +697,97 @@
   font-size: 16px;
   color: #333;
   line-height: 1.8;
-  padding-right: 80px; /* مسافة بسيطة من اليمين */
+  padding-right: 80px;
 }
 
-
-.lesson1_T1-img-container {
+/* الحاوية للفيديو */
+.lesson1_T1-video {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px; /* مسافة بسيطة من اليسار */
+  box-sizing: border-box;
 }
 
-.lesson1_T1-img {
-  width: 50%;
-  height: 50%;
+/* تكبير الفيديو لملء نصف العرض تقريبًا بدون تمرير */
+.lesson1_T1-video iframe {
+  width: 600px;
+  height: 400px;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
-  object-fit: cover;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .lesson1_T1-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lesson1_T1-text {
+    padding: 0 20px;
+  }
+
+  .lesson1_T1-video {
+    padding: 0;
+  }
+
+  .lesson1_T1-video iframe {
+    width: 90%;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/*-----------------------جزء مكونات منصه تيمز ----------------------*/
+
+.lesson1_T2_22 {
+  display: flex;
+  direction: rtl;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 60vh;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden; /* لا شريط تمرير */
+}
+
+/* النص */
+.lesson1_T2_22-text {
+  flex: 1;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* النقاط المرقمة */
+.lesson1_T2_22-text ol {
+  margin: 0;
+  padding-right: 20px;
+  list-style-position: inside;
+}
+
+.lesson1_T2_22-text ol li {
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* الصورة */
+.lesson1_T2_22 img {
+  flex: 1;
+  max-width: 530px;
+  max-height: 530px;
+  object-fit: contain; /* يعرض الصورة كاملة دون اقتطاع */
+  border-radius: 10px;
+  transition: transform 0.5s ease;
 }
 
 
@@ -754,8 +872,8 @@
 }
 
 .img-lesson1_T4 {
-  width: 75%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -862,36 +980,78 @@ button.active {
 
 /*   -----------------------------------------------------الدرس الثاني ---------------------------------------------------  */
 
+
+
+
 /*اهداف الدرس*/
-.lessonObjectives2_1 {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-.lessonObjectives2_1-row {
-  display: flex;
-  gap: 20px;
+.lessonObjectives2_2_2 {
+  width: 100%;
+  height: 70vh; /* يملأ الشاشة دون تمرير */
+  overflow: hidden;
   direction: rtl;
-  align-items: center;
+  box-sizing: border-box;
 }
 
-.lessonObjectives2_1-text {
-  flex: 1;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.8;
-}
-
-.lessonObjectives2_1-img {
-  flex: 1;
-}
-
-.lessonObjectives2_1-img img {
+.lessonObjectives2_2_2-new-container {
+  display: flex;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  object-fit: cover;
+}
+
+.lessonObjectives2_2_2-content-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* النصف الأيمن للنص */
+.lessonObjectives2_2_2-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9ff;
+  box-sizing: border-box;
+}
+
+/* النصف الأيسر للصورة */
+.lessonObjectives2_2_2-img-side {
+  flex: 1;
+  height: 80%;
+  overflow: hidden;
+}
+
+.lessonObjectives2_2_2-img-side img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover; /* تملأ الحاوية بالكامل بدون تشويه */
+  display: block;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .lessonObjectives2_2_2-new-container {
+    flex-direction: column;
+  }
+
+  .lessonObjectives2_2_2-text {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .lessonObjectives2_2_2-img-side {
+    height: auto;
+  }
+
+  .lessonObjectives2_2_2-img-side img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }
 
 /*---------------------------------------*/
@@ -1066,16 +1226,16 @@ button.active {
     <div class="dropdown">
       <button class="dropdown-btn">دروس الموديول</button>
       <div class="dropdown-content">
-        <button onclick="loadLesson(1)"> الدرس الأول:  مفهوم دمج التكنولوجيا في التعليم </button>
-        <button onclick="loadLesson(2)">   الدرس الثاني:  مهارات دمج التكنولوجيا في التعليم </button>
-        <button onclick="loadLesson(3)">  الدرس الثالث:تنمية مهارات التصميم التعليمي </button>
+        <button onclick="loadLesson(1)">   الدرس الأول:   تسجيل الدخول في Mendeley </button>
+        <button onclick="loadLesson(2)"> 	الدرس الثانى:  إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley</button>
+        <button onclick="loadLesson(3)"> 	 	الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley </button>
       </div>
     </div>
   </div>
 
   <div class="content" id="content">
     <div class="intro1">
-           الموديول  الثاني " تنمية مهارات الاتصال الالكتروني من خلال منصة Teams    " 
+           الموديول  الرابع "  إتقان مهارات الثقافة الرقمية باستخدام    Mendeley" 
     </div>
   </div>
 </div>
@@ -1086,8 +1246,7 @@ function showIntro() {
   document.getElementById("content").innerHTML = `
     <div class="intro2">
       <p>
-        تكمن مقدمة هذا الموديول في إكسابك القدرة على توظيف مهارات الاتصال بفاعلية أثناء تصميم المواد التعليمية، وذلك من خلال استخدام منصة Microsoft Teams و مساعدتك في تسهيل فهم المحتوى للمتدربين عبر تبادل المعلومات باستخدام أدوات الاتصال الحديثة بشكل منظم وفعّال.
-      </p>
+تكمن أهمية الحصول على المحتوى التعليمي الخاص بهذا الموديول في إتقانك  للمعارف والمهارات والقواعد والمعايير المتبعة في  استخدام أجهزة الكمبيوتر وتشغيلهاوالتعامل مع برامجه واستخدام شبكة الانترنت والخدمات الالكترونية باستخدام برنامج   Mendeley.      </p>
     </div>
   `;
 }
@@ -1101,10 +1260,10 @@ function showObjectives() {
       <div class="objectives-flex">
         <div class="objectives-text-new">
            <span class="highlight"> </span><br><br>
-          • تتمثل أهداف دراسة الموديول الثاني في:
+          • تتمثل أهداف دراسة الموديول الرابع في:
         </div>
         <div class="objectives-infographic">
-          <img src="Photo/unit2/AHDAF.png" alt="إنفوجرافيك الموديول">
+          <img src="Photo/unit4/AHDAF.png" alt="إنفوجرافيك الموديول">
         </div>
       </div>
     </div>
@@ -1119,21 +1278,24 @@ function lessonIntro1() {
   document.getElementById("content").innerHTML = `
     <div class="intro-box fade-in">
       <p>
-           مقدمة هذا الدرس   
-      </p>
-    </div>
+الدرس الأول : تسجيل الدخول إلى Mendeley  الذي يشتمل على كيفية تسجيل الدخول في Mendeley  والتعرف على أهم المكونات الرئيسة للواجهة.    </div>
   `;
 }
  
 function lessonObjectives1() {
   document.getElementById("content").innerHTML = `
-    <div class="objectives-new-container">
-      <div class="objectives-content-row">
-        <div class="objectives-text">
-          اهداف الدرس 
+    <div class="lessonObjectives1" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley       
+  </div>
+      <div class="objectives-new-container">
+        <div class="objectives-content-row">
+          <div class="objectives-text">
+            بعد دراستك لهذا الدرس والتدرب على مفرداته والقيام بأنشطة التعلم المصاحبة، يجب أن تكون قادراً على أن:
           </div>
-        <div class="objectives-img-side">
-          <img src="Photo/midel1/hdf11.jfif" alt="أهداف الدرس" />
+          <div class="objectives-img-side">
+            <img src="Photo/unit4/L1/HADF.png" alt="أهداف الدرس" />
+          </div>
         </div>
       </div>
     </div>
@@ -1141,17 +1303,30 @@ function lessonObjectives1() {
 }
 
 
+
 //عناصر الدرس
 function lesson1_T1() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T1-section">
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+ الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   </div>
   <h3 class="lesson1_T1-title"></h3>
   <div class="lesson1_T1-row">
     <div class="lesson1_T1-text">
- 
-        عنصر1
-      </div>
-    <img src="Photo/unit1/taref.jfif" alt="صورة" class="lesson1_T1-img">
+      لتسجيل الدخول الى  Mendeley يتبع الأتي    :
+    </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/Op1L_lwtR94" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 </div>
   `;
@@ -1162,78 +1337,142 @@ function lesson1_T1() {
 
 function lesson1_T2() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T2">
-  <div class="lesson1_T2-text">
-  
-    عنصر2
-    </div>
-  <img src="Photo/unit1/ahmia.jfif" alt="صورة">
+   <div class="lesson1_T2_22" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+ الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   </div>
+  <div class="lesson1_T2_22-text">
+    <l<div class="lesson1_T2_22">
+  <div class="lesson1_T2_22-text">
+    <ol> تتمثل مكونات واجهة العمل في Mendeley  في:
+      
+      <ol> -	شريط العنوان ،يوجد به اسم المنصة  وأزرر الاغلاق والتصغير   </ol>
+      <ol> -	شريط القوائم ،يوجد به ثلاث قوائم  كالتالي:- </ol>
+      <ol> 1-  قائمة Searh  يوجد بها مربع بحث ،للبحث عن المقالات واضافتها إلى المكتبة الخاصة بك  </ol>
+      <ol>2-   قائمة Library يوجد بها جميع المراجع والكتب والمصادر التلى تحتاج اليها </ol>
+      <ol>3- Settings ويوجد بها الملف التعريفي والخصوصية وتسجيل الخروج </ol>
+
+    </ol>
+  </div>
+  <img src="Photo/unit4/L1/a1.png" alt="صورة">
 </div>
+
 
   `;
 }
 
 
-
 function lesson1_T3() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T3">
-  <div class="lesson1_T3-text">
-عنصر3     
-    </div>
-  <img src="Photo/unit1/hdf1.jfif" alt="صورة">
-</div>
+    
+</div> <div class="intro-box-lesson1_T4" style="position: relative;">
+  <div style="position: absolute; top: -10px; right: -65px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   
+  </div>
 
+  <div class="title-lesson1_T5">
+   تتمثل مكونات شريط العنوان في Mendeley في :
+  </div>
+
+  <div class="img-box-lesson1_T4">
+    <img src="Photo/unit4/L1/a2.jpg" alt="متطلبات دمج التكنولوجيا" class="img-lesson1_T4">
+  </div>
+</div>
   `;
 }
 
 
 function lesson1_T4() {
   document.getElementById("content").innerHTML = `
-    <div class="intro-box-lesson1_T4">
-      <div class="title-lesson1_T5">
-        عنصر4
-        
-        </div>
-      <div class="img-box-lesson1_T4">
-        <img src="Photo/unit1/mtlbat1.jfif" alt="متطلبات دمج التكنولوجيا" class="img-lesson1_T4">
-      </div>
-    </div>
+      
+</div> <div class="intro-box-lesson1_T4" style="position: relative;">
+  <div style="position: absolute; top: -10px; right: -65px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   
+  </div>
+
+  <div class="title-lesson1_T5">
+  يمكن تعريف شريط القوائم على انه يتكون من :
+  </div>
+
+  <div class="img-box-lesson1_T4">
+    <img src="Photo/unit4/L1/a3.jpg" alt="متطلبات دمج التكنولوجيا" class="img-lesson1_T4">
+  </div>
+</div>
 
     
   `;
 }
 
 
-function lesson1_T5() {
+function lesson1_T6() {
+    document.getElementById('activityBtn').dataset.enabled = 'true';
+document.getElementById('selfEvalBtn').dataset.enabled = 'true';
   document.getElementById("content").innerHTML = `
-    <div class="intro-box-lesson1_T5">
-      
-          <div class="title-lesson1_T5">
-            
-            عنصر5
-            </div>
-            <div class="img-box-lesson1_T5">
-        <img src="Photo/unit1/mqomat.jfif" alt="مقومات نجاح دمج التكنولوجيا" class="img-lesson1_T5">
-      </div>
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+ الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+       لضبط اعدادات قائمة    Mendeley   يتبع الأتي     :
     </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/3PLuYiA4wZc" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+</div>
   `;
 }
 
+function lesson1_T5() {
+    document.getElementById('activityBtn').dataset.enabled = 'true';
+document.getElementById('selfEvalBtn').dataset.enabled = 'true';
+  document.getElementById("content").innerHTML = `
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+ الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+       	لاضافة ملف من جهاز الكمبيوتر كمرجع في Mendeley يتبع الأتي:       
+    </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/D_KMVOrE7lw" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+</div>
+  `;
+}
 
 function lesson1_T7() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T7">
-  <h3></h3>
-  <ol>
-
+    <div class="lesson1_T7" style="position: relative;">
+  <div style="position: absolute; top: -75px; right: -195px; font-size: 8px; margin: 0; padding: 0;">
+ الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   </div>
     <center>
-  من خلال فهمك لأهداف دمج التكنولوجيا في التعليم، قم بحل النشاط التالي 
+   من خلال فهمك لمهارات دمج التكنولوجيا في التعليم وبالتحديد   مهارات الثقافة الرقمية باستخدام Mendeley  ، قم بحل النشاط التالي 
 </center>
 
  
   </ol>
-  <button onclick="window.location.href='unit2/activitiesU2_1.html'">بدء</button>
+  <button onclick="window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/activities 4_1.html'">بدء</button>
 </div>
 
   `;
@@ -1244,26 +1483,65 @@ function loadLessonTabs(lesson) {
   let sidebar = document.getElementById("sidebar");
   let content = document.getElementById("content");
 
-  if(lesson === 1) {
+  if(lesson === 1) {          
     sidebar.innerHTML = `<h5 style="margin-bottom: 1px; color: #4a00e0;">  عناصر الدرس:</h5>
-      <button onclick="setActiveButton(this); lesson1_T1()">   عنصر1 :</button>
-      <button onclick="setActiveButton(this); lesson1_T2()">عنصر2  .</button>
-      <button onclick="setActiveButton(this); lesson1_T3()">عنصر3.</button>
-      <button onclick="setActiveButton(this); lesson1_T4()">عنصر4.</button>
-      <button onclick="setActiveButton(this); lesson1_T5(); enableButtons()">عنصر5</button>
-      <button id="activityBtn" onclick="setActiveButton(this); lesson1_T7()" disabled>النشاط</button>
-      <button id="selfEvalBtn" onclick="window.location.href='unit1/Self-evaluation.html'" disabled>التقويم الذاتي</button>
+      <button onclick="setActiveButton(this); lesson1_T1()"> 	تسجيل الدخول في Mendeley</button>
+      <button onclick="setActiveButton(this); lesson1_T2()"> 	تحديد مكونات واجهة العمل في Mendeley </button>
+      <button onclick="setActiveButton(this); lesson1_T3()"> 	التعرف على مكونات شريط العنوان في Mendeley </button>
+      <button onclick="setActiveButton(this); lesson1_T4()"> 	التعرف على مفهوم شريط القوائم في Mendeley </button>
+      <button onclick="setActiveButton(this); lesson1_T6()"> ضبط اعدادات قائمة Libraryفي  Mendeley </button>
+      <button onclick="setActiveButton(this); lesson1_T5(); enableButtons()"> 	اضافة ملف من جهاز الكمبيوتر كمرجع في Mendeley </button>
+       
+      <button id="activityBtn" data-enabled="false" data-message-shown="false"
+  onclick="
+    if (this.dataset.enabled === 'false') {
+      if (this.dataset.messageShown === 'false') {
+        alert('عليك أجتياز عناصر الدرس أولا');
+        this.dataset.messageShown = 'true';
+      }
+    } else {
+      setActiveButton(this);
+      lesson1_T7();
+    }
+  ">النشاط</button>
+
+<button id="selfEvalBtn" data-enabled="false" data-message-shown="false"
+  onclick="
+    if (this.dataset.enabled === 'false') {
+      if (this.dataset.messageShown === 'false') {
+        alert('عليك أجتياز النشاط أولا');
+        this.dataset.messageShown = 'true';
+      }
+    } else {
+      window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/Self-evaluation4_1.html';
+    }
+  ">التقويم الذاتي</button>
+
     `;
     content.innerHTML = `
-  <div class="lesson1_T1-section">
-  <h3 class="lesson1_T1-title">    </h3>
+  <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+ الموديول الرابع-الدرس الأول: تسجيل الدخول إلى Mendeley   </div>
+  <h3 class="lesson1_T1-title"></h3>
   <div class="lesson1_T1-row">
     <div class="lesson1_T1-text">
-لدمج التكنولوجيا في التعليم تعريفات عدة منها:  </div>
-    <img src="Photo/unit1/taref.jfif" alt="صورة" class="lesson1_T1-img">
+      لتسجيل الدخول الى  Mendeley يتبع الأتي    :
+    </div>
     
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/Op1L_lwtR94" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 </div>
+
 `;
   }
 }
@@ -1271,14 +1549,20 @@ function loadLessonTabs(lesson) {
 
 function lessonObjectives2_1() {
   document.getElementById("content").innerHTML = `
-    <div class="lessonObjectives2_1">
-      <div class="lessonObjectives2_1-row">
-        <div class="lessonObjectives2_1-text">
-          بعد دراستك لهذا الدرس 
-          
-        </div>
-        <div class="lessonObjectives2_1-img">
-          <img src="Photo/unit1/L2/ahdaf.png" alt="أهداف الدرس" />
+    <div class="lessonObjectives2_2_2" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
+      <div class="lessonObjectives2_2_2-new-container">
+        <div class="lessonObjectives2_2_2-content-row">
+          <div class="lessonObjectives2_2_2-text">
+         
+            بعد دراستك لهذا الدرس والتدرب على مفرداته والقيام بأنشطة التعلم المصاحبة، يجب أن تكون قادراً على أن:   
+
+            </div>
+          <div class="lessonObjectives2_2_2-img-side">
+            <img src="Photo/unit4/L2/hadf.png" alt="أهداف الدرس" />
+          </div>
         </div>
       </div>
     </div>
@@ -1289,13 +1573,27 @@ function lessonObjectives2_1() {
 
 function lesson2_T1() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T1-section">
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
   <h3 class="lesson1_T1-title"></h3>
   <div class="lesson1_T1-row">
     <div class="lesson1_T1-text">
-      عنصر1
-      </div>
-    <img src="Photo/unit1/L2/taref.png" alt="صورة" class="lesson1_T1-img">
+       لأضافة مجلد في   Mendeley    يتبع الأتي:   :
+    </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/1MI722fJO6s" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 </div>
   `;
@@ -1303,86 +1601,137 @@ function lesson2_T1() {
 //-------
 function lesson2_T2() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T2">
-  <div class="lesson1_T2-text">
-   
-   عنصر2
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+    لاضافة مرجع بشكل يدوي في Mendeley يتبع الأتي:   
     </div>
-  <img src="Photo/unit1/L2/ahmia.png" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/TMxmAwVF0mI" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 //-------
 function lesson2_T3() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T2">
-  <div class="lesson1_T2-text">
-  
-    عنصر3
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+    لا نشاء مكتبة بداخلها كتب ومراجع في Mendeley  يتبع الأتي:   
     </div>
-  <img src="Photo/unit1/L2/mharatdmg.png" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/L4sOOEtIuV4" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 //-------
 function lesson2_T4() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson2_T4">
-  <div class="lesson2_T4-text">
-  عنصر4
-
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+    لانشاء مجموعات في     Mendeley  يتبع الأتي: 
     </div>
-  <img src="Photo/unit1/L2/mharatatsal.jpeg" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/mb94cOzr9Rk" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 //-------
-function lesson2_T5() {
-  document.getElementById("content").innerHTML = `
-    <div class="lesson2_T5">
-  <div class="lesson2_T5-text">
-    عنصر5
-
-    </div>
-  <img src="Photo/unit1/L2/mharattaqwem.jpeg" alt="صورة">
-</div>
-  `;
-}
-
 //-------
 function lesson2_T6() {
   // تفعيل الأزرار
-  document.getElementById("activityBtn").disabled = false;
-  document.getElementById("selfEvalBtn").disabled = false;
+    document.getElementById('activityBtn').dataset.enabled = 'true';
+    document.getElementById('selfEvalBtn').dataset.enabled = 'true';
 
   // المحتوى المعروض
   document.getElementById("content").innerHTML = `
-    <div class="lesson2_T6">
-  <div class="lesson2_T6-text">
-عنصر6
-
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+    لتنظيم الملفات داخل مجموعات في Mendeley  يتبع الأتي:  
     </div>
-  <img src="Photo/unit1/L2/mharatsqaf.jfif" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/aRoEyEbb4hI" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 
 
-
-
-function lesson2_T7() {
+function lesson2_T8() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T7">
-  <h3></h3>
-  <ol>
+    <div class="lesson1_T7" style="position: relative;">
+  <div style="position: absolute; top: -75px; right: -195px; font-size: 8px; margin: 0; padding: 0;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
 
     <center>
-  من خلال فهمك لأهداف دمج التكنولوجيا في التعليم، قم بحل النشاط التالي 
+   من خلال فهمك لمهارات دمج التكنولوجيا في التعليم وبالتحديد   مهارات الثقافة الرقمية باستخدام Mendeley  ، قم بحل النشاط التالي 
 </center>
 
  
   </ol>
-  <button onclick="window.location.href='unit1/activities 1_2.html'">بدء</button>
+  <button onclick="window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/activities 4_2.html'">بدء</button>
 </div>
   `;
 }
@@ -1390,30 +1739,63 @@ function lesson2_T7() {
 ////////
 function loadLessonTabs2() {
   let sidebar = document.getElementById("sidebar");
-  let content = document.getElementById("content");
-
-  sidebar.innerHTML = `
+  let content = document.getElementById("content"); 
+ 
+  sidebar.innerHTML = `                 
     <h5 style="margin-bottom: 1px; color: #4a00e0;">عناصر الدرس الثاني:</h5>
-    <button onclick="setActiveButton(this); lesson2_T1()">	عنصر1  :</button>
-    <button onclick="setActiveButton(this); lesson2_T2()"> 	  عنصر2     :</button>
-    <button onclick="setActiveButton(this); lesson2_T3()"> 	 عنصر3 :</button>
-    <button onclick="setActiveButton(this); lesson2_T4()"> 	  عنصر4    :</button>
-    <button onclick="setActiveButton(this); lesson2_T5()"> 	   عنصر5    :</button>
-    <button onclick="setActiveButton(this); lesson2_T6()">عنصر6:</button>
-    <button id="activityBtn" onclick="setActiveButton(this); lesson2_T7()" disabled>النشاط</button>
-    <button id="selfEvalBtn" onclick="window.location.href='unit1/Self-evaluation1_2.html'" disabled>التقويم الذاتي</button>
+    <button onclick="setActiveButton(this); lesson2_T1()"> 	اضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley   </button>
+    <button onclick="setActiveButton(this); lesson2_T2()"> اضافة مرجع يدويا في Mendeley  </button>
+    <button onclick="setActiveButton(this); lesson2_T3()"> انشاء مكتبة بداخلها كتب ومراجع في Mendeley  </button>
+    <button onclick="setActiveButton(this); lesson2_T4()"> انشاء مجموعات خاصة في منصة   Mendeley </button>
+    <button onclick="setActiveButton(this); lesson2_T6()"> تنظيم الملفات داخل مجموعة في Mendeley </button>
+    <button id="activityBtn" data-enabled="false" data-message-shown="false"
+  onclick="
+    if (this.dataset.enabled === 'false') {
+      if (this.dataset.messageShown === 'false') {
+        alert('عليك أجتياز عناصر الدرس أولا');
+        this.dataset.messageShown = 'true';
+      }
+    } else {
+      setActiveButton(this);
+      lesson2_T8();
+    }
+  ">النشاط</button>
 
+<button id="selfEvalBtn" data-enabled="false" data-message-shown="false"
+  onclick="
+    if (this.dataset.enabled === 'false') {
+      if (this.dataset.messageShown === 'false') {
+        alert('عليك أجتياز النشاط أولا');
+        this.dataset.messageShown = 'true';
+      }
+    } else {
+      window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/Self-evaluation4_2.html';
+    }
+  ">التقويم الذاتي</button>
   `;
 
   content.innerHTML = `
-    <div class="lesson1_T1-section">
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+  الموديول الرابع-الدرس الثاني: إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley      
+  </div>
   <h3 class="lesson1_T1-title"></h3>
   <div class="lesson1_T1-row">
     <div class="lesson1_T1-text">
+       لأضافة مجلد في   Mendeley    يتبع الأتي:   :
+    </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/1MI722fJO6s" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-   
-      </div>
-    <img src="Photo/unit1/L2/taref.png" alt="صورة" class="lesson1_T1-img">
   </div>
 </div>
   `;
@@ -1422,31 +1804,65 @@ function loadLessonTabs2() {
 
 ///////////////// -------------------------------------  الدرس الثالث  -----------------------------------------------///////////////
 function loadLessonTabs3() {
-  let sidebar = document.getElementById("sidebar");
-  let content = document.getElementById("content");
+  let sidebar = document.getElementById("sidebar"); 
+  let content = document.getElementById("content");           
 
   sidebar.innerHTML = `
     <h5 style="margin-bottom: 1px; color: #4a00e0;">عناصر الدرس الثالث:</h5>
-    <button onclick="setActiveButton(this); lesson3_T1()">     عنصر1       :</button>
-    <button onclick="setActiveButton(this); lesson3_T2()">  عنصر2:</button>
-    <button onclick="setActiveButton(this); lesson3_T3()"> عنصر3 :</button>
-    <button onclick="setActiveButton(this); lesson3_T4()"> عنصر4  :</button>
-    <button onclick="setActiveButton(this); lesson3_T5()"> عنصر5 :</button>
-    <button onclick="setActiveButton(this); lesson3_T6()">  عنصر6  :</button>
-    <button id="activityBtn" onclick="setActiveButton(this); lesson3_T7()" disabled>النشاط</button>
-    <button id="selfEvalBtn" onclick="window.location.href='unit1/Self-evaluation1_3.html'" disabled>التقويم الذاتي</button>
+    <button onclick="setActiveButton(this); lesson3_T1()"> 	البحث في الوثائق في   Mendeley </button>
+    <button onclick="setActiveButton(this); lesson3_T2()"> 	ضبط خصائص المرجع أو المصدر في  Mendeley </button>
+    <button onclick="setActiveButton(this); lesson3_T3()"> 	دعوة باحثين في مجموعات للتعاون فيما بينهم في  Mendeley </button>
+    <button onclick="setActiveButton(this); lesson3_T4()">	تغيير نمط اقتباس مرجع معين في Mendeley   </button>
+    <button onclick="setActiveButton(this); lesson3_T5()">  حذف مرجع فيMendeley </button>
+    <button onclick="setActiveButton(this); lesson3_T6()"> 	حذف مجموعة فيMendeley</button>
+    <button id="activityBtn" data-enabled="false" data-message-shown="false"
+  onclick="
+    if (this.dataset.enabled === 'false') {
+      if (this.dataset.messageShown === 'false') {
+        alert('عليك أجتياز عناصر الدرس أولا');
+        this.dataset.messageShown = 'true';
+      }
+    } else {
+      setActiveButton(this);
+      lesson3_T7();
+    }
+  ">النشاط</button>
 
+<button id="selfEvalBtn" data-enabled="false" data-message-shown="false"
+  onclick="
+    if (this.dataset.enabled === 'false') {
+      if (this.dataset.messageShown === 'false') {
+        alert('عليك أجتياز النشاط أولا');
+        this.dataset.messageShown = 'true';
+      }
+    } else {
+      window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/Self-evaluation4_3.html';
+    }
+  ">التقويم الذاتي</button>
   `;
 
   content.innerHTML = `
-    <div class="lesson1_T1-section">
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
   <h3 class="lesson1_T1-title"></h3>
   <div class="lesson1_T1-row">
     <div class="lesson1_T1-text">
-عنصر1                        
+    للبحث في الوثائق في منصة   Mendeley  يتبع الأتي:
+    </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/1ingAaTRWt4" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-</div>
-    <img src="Photo/unit1/L2/taref.png" alt="صورة" class="lesson1_T1-img">
   </div>
 </div>
   `;
@@ -1454,33 +1870,49 @@ function loadLessonTabs3() {
 //-----------                                              -------------------------
 function lessonObjectives3_1() {
   document.getElementById("content").innerHTML = `
-    <div class="lessonObjectives2_1">
-      <div class="lessonObjectives2_1-row">
-        <div class="lessonObjectives2_1-text">
-       
-            هدف الدرس
+    <div class="lessonObjectives2_2_2" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
 
+       </div>
+      <div class="lessonObjectives2_2_2-new-container">
+        <div class="lessonObjectives2_2_2-content-row">
+          <div class="lessonObjectives2_2_2-text">
+         
+بعد دراستك لهذا الدرس والتدرب على مفرداته والقيام بأنشطة التعلم المصاحبة، يجب أن تكون قادراً على أن:
+            </div>
+          <div class="lessonObjectives2_2_2-img-side">
+            <img src="Photo/unit4/L3/hadf.png" alt="أهداف الدرس" />
           </div>
-        <div class="lessonObjectives2_1-img">
-          <img src="Photo/unit1/L3/ahdaf.png" alt="أهداف الدرس" />
         </div>
       </div>
     </div>
   `;
 }
 
-
-
 function lesson3_T1() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T1-section">
+     <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
   <h3 class="lesson1_T1-title"></h3>
   <div class="lesson1_T1-row">
     <div class="lesson1_T1-text">
-       عنصر1
+    للبحث في الوثائق في منصة   Mendeley  يتبع الأتي:
+    </div>
     
-      </div>
-    <img src="Photo/unit1/L3/taref.png" alt="صورة" class="lesson1_T1-img">
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/1ingAaTRWt4" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 </div>
   `;
@@ -1488,89 +1920,165 @@ function lesson3_T1() {
 //-------
 function lesson3_T2() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T2">
-  <div class="lesson1_T2-text">
-     عنصر2
-    
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع -الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+ لضبط خصائص المرجع أو المصدر في  Mendeley  يتبع الأتي :
     </div>
-  <img src="Photo/unit1/L3/ahmia.jfif" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/zoJ4tHxPJ-w" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 //-------
 function lesson3_T3() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson2_T4">
-  <div class="lesson2_T4-text">
-   
-    عنصر3
-   
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+لدعوة باحثين في مجموعات للتعاون فيما بينهم في  Mendeley   يتبع الأتي:      
     </div>
-  <img src="Photo/unit1/L3/mharatdmg.png" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/lNtUztdbeKI" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 //-------
 function lesson3_T4() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson3_T4">
-  <div class="lesson3_T4-text">
-
-    عنصر4
-
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+لتغيير نمط اقتباس مرجع معين في Mendeley  يتبع الأتي:        
     </div>
-  <img src="Photo/unit1/L3/mharatatsal.png" alt="صورة">
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/cn2ijayCceU" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 </div>
   `;
 }
 //-------
 function lesson3_T5() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson2_T5">
-  <div class="lesson2_T5-text">
-   
-    عنصر5
-
+    <div class="lesson1_T1-section"style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+     لحذف مرجع في Mendeley يتبع الأتي:          
     </div>
-  <img src="Photo/unit1/L3/mharattaqwem.jpg" alt="صورة">
+
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/3UIBZH4mLrQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 </div>
+
   `;
 }
 
 //-------
 function lesson3_T6() {
-  // تفعيل الأزرار
-  document.getElementById("activityBtn").disabled = false;
-  document.getElementById("selfEvalBtn").disabled = false;
-
+    document.getElementById('activityBtn').dataset.enabled = 'true';
+document.getElementById('selfEvalBtn').dataset.enabled = 'true';
   // المحتوى المعروض
   document.getElementById("content").innerHTML = `
-    <div class="lesson2_T5">
-  <div class="lesson2_T5-text">
-عنصر6                                          
+    <div class="lesson1_T1-section" style="position: relative;">
+  <div style="position: absolute; top: 0px; right: 4px; font-size: 8px; margin: 0; padding: 0; z-index: 10;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
+  <h3 class="lesson1_T1-title"></h3>
+  <div class="lesson1_T1-row">
+    <div class="lesson1_T1-text">
+لحذف مجموعة فيMendeley   يتبع الأتي:              
+    </div>
+    
+    <!-- تضمين فيديو اليوتيوب -->
+    <div class="lesson1_T1-video">
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/ok6T3kkYeTU" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-</div>
-  <img src="Photo/unit1/L3/mharatsqaf.jpg" alt="صورة">
+  </div>
 </div>
   `;
 }
 
-
+//--------------------------
 
 
 function lesson3_T7() {
   document.getElementById("content").innerHTML = `
-    <div class="lesson1_T7">
-  <h3></h3>
-  <ol>
+    <div class="lesson1_T7" style="position: relative;">
+  <div style="position: absolute; top: -75px; right: -195px; font-size: 8px; margin: 0; padding: 0;">
+     لموديول الرابع-الدرس الثالث:   تنمية البحث في الوثائق في   Mendeley    
+  </div>
 
     <center>
-  من خلال فهمك لأهداف دمج التكنولوجيا في التعليم، قم بحل النشاط التالي 
+   من خلال فهمك لمهارات دمج التكنولوجيا في التعليم وبالتحديد   مهارات الثقافة الرقمية باستخدام Mendeley  ، قم بحل النشاط التالي 
 </center>
 
  
   </ol>
-  <button onclick="window.location.href='unit1/activities 1_3.html'">بدء</button>
+  <button onclick="window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/activities 4_3.html'">بدء</button>
 </div>
   `;
 }
@@ -1590,7 +2098,7 @@ function loadLesson(lesson) {
   sidebar.innerHTML = `
     <!-- <button onclick="setActiveButton(this); lessonIntro1()">مقدمة الدرس</button> -->
     <button onclick="setActiveButton(this); lessonObjectives1()">أهداف الدرس</button>
-    <button onclick="window.location.href='unit1/Pre-assessmentLesson1.html'">التقويم القبلي</button>
+    <button onclick="window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/Pre-assessmentLesson4_1.html'">التقويم القبلي</button>
     <button onclick="alert('عليك أجتياز التقويم القبلي أولا')"> عناصر الدرس </button>
 <button onclick="alert('عليك دراسة عناصر الدرس أولاً')">النشاط</button>
 <button onclick="alert('عليك دراسة عناصر الدرس أولاً')">التقويم الذاتي</button>
@@ -1599,8 +2107,7 @@ function loadLesson(lesson) {
   content.innerHTML = `
   <div class="intro1">
     <p>
-           الدرس الاول بعنوان   .
-    </p>
+الدرس الأول : تسجيل الدخول إلى Mendeley  الذي يشتمل على كيفية تسجيل الدخول في Mendeley  والتعرف على أهم المكونات الرئيسة للواجهة.    </div>
   </div>
 `;
 
@@ -1611,7 +2118,7 @@ function loadLesson(lesson) {
     sidebar.innerHTML = `
       <!-- <button onclick="setActiveButton(this); lessonIntro2_1()">مقدمة الدرس</button> -->
     <button onclick="setActiveButton(this); lessonObjectives2_1()">أهداف الدرس</button>
-    <button onclick="window.location.href='unit1/Pre-assessmentLesson1_2.html'">التقويم القبلي</button>
+    <button onclick="window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/Pre-assessmentLesson4_2.html'">التقويم القبلي</button>
     <button onclick="alert('عليك أجتياز التقويم القبلي أولا')"> عناصر الدرس </button>
 <button onclick="alert('عليك دراسة عناصر الدرس أولاً')">النشاط</button>
 <button onclick="alert('عليك دراسة عناصر الدرس أولاً')">التقويم الذاتي</button>
@@ -1619,9 +2126,7 @@ function loadLesson(lesson) {
   content.innerHTML = `
   <div class="intro1">
     <p>
-      الدرس الثاني بعنوان   .
-</p>
-  </div>
+الدرس الثاني:إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeleyالذي يشتمل على  كيفية إضافة مجلد من جهاز الكمبيوتر كمرجع في Mendeley انشاء مكتبة بداخلها مجموعة من المراجع.  </div>
 `;
   }
   
@@ -1629,7 +2134,7 @@ function loadLesson(lesson) {
     sidebar.innerHTML = `
       <!-- <button onclick="setActiveButton(this); lessonIntro3_1()">مقدمة الدرس</button> -->
     <button onclick="setActiveButton(this); lessonObjectives3_1()">أهداف الدرس</button>
-    <button onclick="window.location.href='unit1/Pre-assessmentLesson1_3.html'">التقويم القبلي</button>
+    <button onclick="window.location.href='https://educationalenvironment.github.io/Educational-environment_thkem/unit4/Pre-assessmentLesson4_3.html'">التقويم القبلي</button>
     <button onclick="alert('عليك أجتياز التقويم القبلي أولا')"> عناصر الدرس </button>
 <button onclick="alert('عليك دراسة عناصر الدرس أولاً')">النشاط</button>
 <button onclick="alert('عليك دراسة عناصر الدرس أولاً')">التقويم الذاتي</button>
@@ -1637,9 +2142,7 @@ function loadLesson(lesson) {
   content.innerHTML = `
   <div class="intro1">
      <p>
-  الدرس الثالث بعنوان   .
-   </p>
-      </div>
+الدرس الثالث:تنمية البحث في الوثائق في    Mendeleyالذي يشتمل على كيفية البحث في الوثائق بداخل  Mendeley  الفرق بين حذف المرجع والمجموعة.      </div>
 `;
   }
 }
